@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval &SetTimeout</title>
+</head>
+<body style="background-color: cornsilk;color: darkgoldenrod;">
+
+    <h1>Show Date</h1>
+    <h2></h2>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+
+    <script>
+
+        const start=document.querySelector('#start')
+        start.addEventListener('click',function(){
+
+
+        let timeshow= setInterval(() => {
+            const elem=document.querySelector('h2')
+            const dt=new Date()
+            elem.innerHTML=dt.toLocaleTimeString()
+           
+        }, 1000);
+
+        const stop=document.querySelector('#stop')
+        stop.addEventListener('click',function(){
+            clearInterval(timeshow)
+        })
+        })
+        
+
+       
+
+
+    </script>
+</body>
+</html>
